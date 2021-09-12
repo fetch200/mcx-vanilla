@@ -1,3 +1,16 @@
-import './style/style.scss'
+import './style/ui.scss'
+import {
+  ui,
+  // network,
+  // device,
+  // dataCache,
+  // media
+} from './js/index'
 
-console.log('test')
+window.mcx = {
+  ...ui
+  // ...network,
+  // ...device,
+  // ...dataCache,
+  // ...media,
+}

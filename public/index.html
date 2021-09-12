@@ -9,7 +9,44 @@
 </head>
 <body>
 <div id="root">
-  test
+  <button class="show-loading">展示 loading</button>
+  <button class="show-toast">展示 toast</button>
+  <button class="show-modal">展示 modal</button>
+  <button class="goTop">回到到顶部</button>
 </div>
+<script>
+  const $ = s => document.querySelector(s)
+  const $$ = s => Array.from(document.querySelectorAll(s))
+  const $showLoadingButton = $('.show-loading')
+  const $showToastButton = $('.show-toast')
+  const $showModalButton = $('.show-modal')
+  const $goTop = $('.goTop')
+  $showLoadingButton.addEventListener('click', () => {
+    mcx.loadingUtil.show({title: `1s后手动关闭loading`})
+    let timeId = setTimeout(() => {
+      clearTimeout(timeId)
+      mcx.loadingUtil.hide()
+    }, 1000)
+  })
+  $showToastButton.addEventListener('click', (() => {
+    let list = [
+      {title: '无图标提示 1.5s后自动消失'},
+      {title: '成功，1.5s后自动消失', icon: 'success'},
+      {title: '失败 1.5s后自动消失', icon: 'fail'},
+      {title: '加载中 1.5s后自动消失', icon: 'loading'},
+    ]
+    let i = 0
+    return () => {
+      mcx.toastUtil.show({title: 'success'})
+      mcx.toastUtil.show(list[i++ % 4])
+    }
+  })())
+  $showModalButton.addEventListener('click', () => {
+    mcx.modalUtil.show({content: '<div style="background: #000;color:#FFF;padding:20px">自定义内容</div>'})
+  })
+  $goTop.addEventListener('click',()=>{
+    mcx.pageScrollTo()
+  })
+</script>
 </body>
 </html>

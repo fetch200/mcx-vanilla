@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mcx-dialog-mask {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1300;
+}
+.mcx-dialog-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mcx-loading, .mcx-toast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #FFF;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.mcx-toast {
+  min-width: 112px;
+  flex-direction: column;
+}
+.mcx-loading-title {
+  padding-left: 10px;
+  white-space: nowrap;
+}
+.mcx-loading-icon {
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  background: no-repeat center/cover;
+  flex-shrink: 0;
+}
+.mcx-toast-icon {
+  width: 54px;
+  height: 54px;
+  background: no-repeat center/cover;
+}
+.mcx-toast-icon.spin {
+  animation: spin linear 1s infinite;
+}
+.mcx-toast-title {
+  padding-top: 10px;
+  white-space: nowrap;
+}
+@keyframes spin {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
