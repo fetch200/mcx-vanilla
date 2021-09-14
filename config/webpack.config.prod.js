@@ -8,27 +8,27 @@ const packageVersion = require('../package.json').version
 module.exports = merge(baseWebpackConfig, {
   module: {
     rules: [
-      {
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [
-                  [
-                    'autoprefixer',
-                    {},
-                  ],
-                ],
-              },
-            },
-          },
-          'sass-loader',
-        ],
-      }
+      // {
+        // test: /\.(sa|sc|c)ss$/,
+        // use: [
+        //   MiniCssExtractPlugin.loader,
+        //   'css-loader',
+        //   {
+        //     loader: 'postcss-loader',
+        //     options: {
+        //       postcssOptions: {
+        //         plugins: [
+        //           [
+        //             'autoprefixer',
+        //             {},
+        //           ],
+        //         ],
+        //       },
+        //     },
+        //   },
+        //   'sass-loader',
+        // ],
+      // }
     ]
   },
   plugins: [new MiniCssExtractPlugin({
