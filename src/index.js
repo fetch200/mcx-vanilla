@@ -1,15 +1,10 @@
 import './style/ui.scss'
-import {
-  ui,
-  // network,
-  // device,
-  // dataCache,
-  // media
-} from './js/index'
+import {ui} from './js/ui'
+import {network} from './js/network'
 
 window.mcx = {
-  ...ui
-  // ...network,
+  ...ui,
+  ...network,
   // ...device,
   // ...dataCache,
   // ...media,
