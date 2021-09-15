@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const baseWebpackConfig = require('./webpack.config.base')
 const {merge} = require('webpack-merge')
@@ -31,15 +32,15 @@ module.exports = merge(baseWebpackConfig, {
       // }
     ]
   },
-  plugins: [new MiniCssExtractPlugin({
-    linkType: 'text/css',
-    filename: `mcx-ui-vanilla.min-${packageVersion}.css`
-  })],
+  // plugins: [new MiniCssExtractPlugin({
+  //   linkType: 'text/css',
+  //   filename: `mcx-ui-vanilla.min-${packageVersion}.css`
+  // })],
   mode: 'production',
   optimization: {
     minimize: true,
     minimizer: [
-      new CssMinimizerPlugin(),
+      // new CssMinimizerPlugin(),
       new TerserPlugin()
     ],
   },

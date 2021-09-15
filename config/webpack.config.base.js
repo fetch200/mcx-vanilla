@@ -32,12 +32,12 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../public/index.html'),
-      inject: 'body'
-    }),
-  ],
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     template: path.resolve(__dirname, '../public/index.html'),
+  //     inject: 'body'
+  //   }),
+  // ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname,'..src')
