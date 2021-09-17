@@ -1,11 +1,12 @@
-import './style/ui.scss'
-import {ui} from './js/ui'
-import {network} from './js/network'
+import './style/popup-util.scss'
+import {canvasUtil} from './js/canvasUtil'
+import {deviceUtil} from './js/deviceUtil'
+import {fileUtil} from './js/fileUtil'
+import {localCacheUtil} from './js/localCacheUtil'
+import {popupUtil} from './js/popupUtil'
+import {requestUtil} from './js/requestUtil'
 
 window.mcx = {
-  ...ui,
-  ...network,
-  // ...device,
-  // ...dataCache,
-  // ...media,
+  popupUtil,
+  requestUtil,
 }

@@ -4,16 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {merge} = require('webpack-merge')
 
 module.exports = merge(baseWebpackConfig, {
-  module: {
-    rules: [
-
-    ],
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, '../public/index.html'),
-        inject: 'body'
-      }),
-    ],
-  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../public/index.html'),
+      inject: 'body'
+    }),
+  ],
   mode: 'development'
 })

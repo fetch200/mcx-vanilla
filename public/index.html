@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=deviceUtil-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MCX-UI-Vanilla</title>
 </head>
@@ -22,10 +22,10 @@
   const $showModalButton = $('.show-modal')
   const $goTop = $('.goTop')
   $showLoadingButton.addEventListener('click', () => {
-    mcx.loadingUtil.show({title: `1s后手动关闭loading`})
+    mcx.popupUtil.showLoading({title: `1s后手动关闭loading`})
     let timeId = setTimeout(() => {
       clearTimeout(timeId)
-      mcx.loadingUtil.hide()
+      mcx.popupUtil.hideLoading()
     }, 1000)
   })
   $showToastButton.addEventListener('click', (() => {
@@ -37,15 +37,15 @@
     ]
     let i = 0
     return () => {
-      mcx.toastUtil.show({title: 'success'})
-      mcx.toastUtil.show(list[i++ % 4])
+      mcx.popupUtil.showToast({title: 'success'})
+      mcx.popupUtil.showToast(list[i++ % 4])
     }
   })())
   $showModalButton.addEventListener('click', () => {
-    mcx.modalUtil.show({content: '<div style="background: #000;color:#FFF;padding:20px">自定义内容</div>'})
+    mcx.popupUtil.showModal({content: '<div style="background: #000;color:#FFF;padding:20px">自定义内容</div>'})
   })
   $goTop.addEventListener('click',()=>{
-    mcx.pageScrollTo()
+    mcx.popupUtil.pageScrollTo()
   })
 </script>
 </body>

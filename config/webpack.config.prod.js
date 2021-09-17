@@ -34,7 +34,7 @@ module.exports = merge(baseWebpackConfig, {
   },
   // plugins: [new MiniCssExtractPlugin({
   //   linkType: 'text/css',
-  //   filename: `mcx-ui-vanilla.min-${packageVersion}.css`
+  //   filename: `mcx-popupUtil-vanilla.min-${packageVersion}.css`
   // })],
   mode: 'production',
   optimization: {
