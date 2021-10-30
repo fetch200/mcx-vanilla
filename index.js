@@ -1,1 +1,0 @@
-console.log('使用方法为：引入 dist 目录下的 js 文件')

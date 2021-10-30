@@ -1,11 +1,12 @@
 {
   "name": "mcx-ui-vanilla",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack server --config config/webpack.config.dev.js",
+    "start:static": "live-server ./src",
     "build": "webpack --config config/webpack.config.prod.js"
   },
   "keywords": [],

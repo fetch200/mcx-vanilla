@@ -3,6 +3,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const baseWebpackConfig = require('./webpack.config.base')
+const path = require('path')
 const {merge} = require('webpack-merge')
 const packageVersion = require('../package.json').version
 
@@ -36,6 +37,12 @@ module.exports = merge(baseWebpackConfig, {
   //   linkType: 'text/css',
   //   filename: `mcx-popupUtil-vanilla.min-${packageVersion}.css`
   // })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../src/static-pages/study-circle.html'),
+      inject: 'body'
+    }),
+  ],
   mode: 'production',
   optimization: {
     minimize: true,

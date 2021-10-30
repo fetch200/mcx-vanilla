@@ -1,12 +1,16 @@
-import './style/popup-util.scss'
-import {canvasUtil} from './js/canvasUtil'
-import {deviceUtil} from './js/deviceUtil'
-import {fileUtil} from './js/fileUtil'
-import {localCacheUtil} from './js/localCacheUtil'
-import {popupUtil} from './js/popupUtil'
-import {requestUtil} from './js/requestUtil'
+// import './style/popup-util.scss'
+// import canvasUtil from './utils/canvasUtil'
+// import deviceUtil from './utils/deviceUtil'
+// import fileUtil from './utils/fileUtil'
+// import localCacheUtil from './utils/localCacheUtil'
+// import dialogUtil from './utils/dialogUtil'
+// import urlUtil from './utils/urlUtil'
 
-window.mcx = {
-  popupUtil,
-  requestUtil,
-}
+// window.mcx = {
+  // canvasUtil,
+  // deviceUtil,
+  // fileUtil,
+  // dialogUtil,
+  // localCacheUtil,
+  // urlUtil
+// }

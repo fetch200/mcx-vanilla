@@ -5,7 +5,7 @@ const packageVersion = require('../package.json').version
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: `mcx-ui-vanilla.min-${packageVersion}.js`,
+    filename: `mcx-vanilla-jdk.min.${packageVersion}.js`,
     path: path.resolve(__dirname, '../dist'),
     clean: true
   },
