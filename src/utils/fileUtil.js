@@ -1,7 +1,9 @@
-// 媒体、文件
+// 文件、媒体
 
 class FileUtil {
-  constructor() {}
+  constructor() {
+    console.log('fileUtil')
+  }
 
   chooseImage() {}
 
@@ -20,8 +22,6 @@ class FileUtil {
   chooseFile() {}
 }
 
-const fileUtil = new FileUtil()
-
-export {fileUtil}
+export default new FileUtil()
 
 

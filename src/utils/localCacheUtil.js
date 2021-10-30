@@ -1,4 +1,4 @@
-// 数据缓存
+// 本地数据缓存
 
 class LocalCacheUtil {
   constructor() {}
@@ -12,6 +12,4 @@ class LocalCacheUtil {
   clearStorage() {}
 }
 
-const localCacheUtil = new LocalCacheUtil()
-
-export {localCacheUtil}
+export default new LocalCacheUtil()

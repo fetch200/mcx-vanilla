@@ -1,17 +1,19 @@
-// 弹窗
+// 对话框
+// 原生的对话框分三种：alert——消息提示、confirm——询问对话框、prompt——促使户输入内容的对话框
+// 我们的组件有五种对话框：alert、confirm、prompt、showLoading、showToast、showModal
 
-class PopupUtil {
+window.alert('222')
+window.confirm('mmm')
+window.prompt('344')
+
+class DialogUtil {
   constructor() {
-    // 用于给弹出框加唯一标识
     this.unique = new Date().getTime()
-    // loading 相关参数
     this.loadingNode = null
     this.loadingShowing = false
-    // toast 相关参数
     this.toastNode = null
     this.toastShowing = false
     this.toastTimeId = null
-    // modal 相关参数
     this.modalNode = null
     this.modalShowing = false
     this.modalDialogMaskEvent = false
@@ -98,13 +100,7 @@ class PopupUtil {
     this.modalShowing && this.modalNode && this.modalNode.remove()
     this.modalShowing = false
   }
-
-  pageScrollTo() {
-    document.documentElement.scrollTop = 0
-  }
 }
 
 
-const popupUtil = new PopupUtil()
-
-export {popupUtil}
+export default new DialogUtil()
