@@ -1,0 +1,3 @@
+[submodule "src/static-pages"]
+	path = src/static-pages
+	url = git@github.com:fetch200/static-pages.git
